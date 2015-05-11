@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/title_re"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <TextView
+            android:id="@+id/dialog_sure_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="注意"
+            android:textColor="@color/title_bar_color"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/name_div"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/dialog_sure_title_text"
+            android:layout_marginTop="15dp"
+            android:background="@color/title_bar_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dialog_sure_content_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_re"
+        android:layout_margin="20dp"
+        android:lineSpacingExtra="3dp"
+        android:gravity="center"
+        android:text="content \n Line2"
+        android:textColor="@color/title_bar_color"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:id="@+id/choice"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dialog_sure_content_text"
+        android:orientation="horizontal" >
+
+
+
+        <TextView
+            android:id="@+id/dialog_sure_cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/title_bar_color"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/dialog_div"
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="@color/no"/>
+
+
+        <TextView
+            android:id="@+id/dialog_sure_ok"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/title_bar_color"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

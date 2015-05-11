@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/title_bar_color">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/btn_back"
+        android:paddingRight="10dp"
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_selector_bg_alpha"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/btn_back_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="-5dp"
+            android:src="@drawable/icon_chevron_left"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/btn_back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="-5dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:text="返回"
+            android:textColor="@color/title_bar_text_color"
+            android:layout_toRightOf="@+id/btn_back_icon"
+            android:textSize="@dimen/title_text_size" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/title_bar_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:maxLength="9"
+        android:ellipsize="end"
+        android:text="排号管理"
+        android:textColor="@color/title_bar_text_color"
+        android:textSize="@dimen/title_text_size" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btn_right"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:text="右边"
+        android:textColor="@color/title_bar_text_color"
+        android:layout_alignParentRight="true"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/btn_right_img"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingTop="6dp"
+        android:paddingBottom="8dp"
+        android:paddingRight="9dp"
+        android:paddingLeft="9dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/btn_selector_bg_alpha"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>
