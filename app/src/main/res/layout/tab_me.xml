@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/tab_icon_me_id"
+        android:layout_width="@dimen/tab_icon_width"
+        android:layout_height="@dimen/tab_icon_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/tab_icon_marginTop"
+        android:src="@drawable/icon_tab_me_normal"/>
+
+
+    <TextView
+        android:id="@+id/tab_me_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/tab_text_marginBottom"
+        android:layout_marginTop="@dimen/tab_text_marginTop"
+        android:layout_below="@+id/tab_icon_me_id"
+        android:textColor="@color/tab_normal"
+        android:text="我"
+        android:textSize="@dimen/tab_text_size"/>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_recent_tips"-->
+        <!--android:layout_width="8dp"-->
+        <!--android:layout_height="8dp"-->
+        <!--android:layout_toRightOf="@+id/tab_icon_me_id"-->
+        <!--android:layout_marginRight="35dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@drawable/msg_tips"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="12sp"-->
+        <!--android:visibility="invisible" />-->
+
+</RelativeLayout>

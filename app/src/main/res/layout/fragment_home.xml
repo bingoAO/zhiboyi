@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+    <!--当前直播-->
+    <RelativeLayout
+        android:id="@+id/cur_room_rl"
+        android:clickable="true"
+        android:background="@drawable/btn_selector_white_grey"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        <com.bao.wec.ui.customview.CircleImageView
+            android:id="@+id/cur_room_iv"
+            android:layout_margin="7dp"
+            android:src="@drawable/sample_avatar"
+            android:scaleType="centerCrop"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/cur_room_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/room_title_color"
+            android:fontFamily="sans-serif-light"
+            android:text="EVC万人微商培训直播课程"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/cur_room_finish_btn"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_finish"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:layout_marginRight="2dp"
+            android:layout_width="55dp"
+            android:layout_height="55dp" />
+
+        <View
+            android:layout_below="@+id/cur_room_iv"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/e"/>
+        
+        </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

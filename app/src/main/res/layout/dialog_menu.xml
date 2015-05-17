@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/choice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/menu_share"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_titlecolor_light"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="分享"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/e" />
+
+        <TextView
+            android:id="@+id/menu_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_selector_titlecolor_light"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="编辑"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/e" />
+
+        <TextView
+            android:id="@+id/menu_cancel_sbc"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/btn_selector_titlecolor_light"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="取消订阅"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/e" />
+
+        <TextView
+            android:id="@+id/menu_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/btn_selector_titlecolor_light"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="注销频道"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/e" />
+
+        <TextView
+            android:id="@+id/menu_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/btn_selector_titlecolor_light"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

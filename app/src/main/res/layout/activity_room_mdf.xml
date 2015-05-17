@@ -1,0 +1,270 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!--封面-->
+            <LinearLayout
+                android:id="@+id/room_mdf_avatar_btn"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="修改封面"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <com.bao.wec.ui.customview.CircleImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/room_mdf_avatar"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="10dp"
+                        bao:border_color="@color/d"
+                        bao:border_width="2dp"
+                        android:src="@drawable/sample_avatar_2"/>
+
+                </RelativeLayout>
+
+
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+            <!--频道名称-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:text="频道标题"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <EditText
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/room_mdf_name_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/create_item_et_height"
+                    android:layout_gravity="center"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:fontFamily="sans-serif-light"
+                    android:text="万人微商"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:maxLength="30"
+                    android:textSize="17sp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/title_bar_color_light"/>
+
+            </LinearLayout>
+
+            <!--频道号 -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:text="频道房号"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <EditText
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/room_mdf_id_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/create_item_et_height"
+                    android:layout_gravity="center"
+                    android:textCursorDrawable="@null"
+                    android:inputType="number"
+                    android:fontFamily="sans-serif-light"
+                    android:text="233"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:maxLength="30"
+                    android:textSize="17sp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/title_bar_color_light"/>
+
+            </LinearLayout>
+
+            <!--频道地址-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:text="频道地址"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+
+                <TextView
+                    android:text="chuxin.ren/fm/"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/title_bar_color"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <EditText
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/room_mdf_addr_et"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/create_item_et_height"
+                    android:layout_gravity="center"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:fontFamily="sans-serif-light"
+                    android:text="wrws"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:maxLength="30"
+                    android:textSize="17sp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/title_bar_color_light"/>
+
+            </LinearLayout>
+
+            <!--频道简介-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:text="频道简介"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/create_item_height" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/e"/>
+
+
+                <EditText
+                    android:id="@+id/room_mdf_details_et"
+                    android:inputType="textMultiLine"
+                    android:textCursorDrawable="@null"
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:text="努力努力!!"
+                    android:gravity="top|left"
+                    android:textSize="18sp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/title_bar_color_light" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/room_mdf_bottom_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_selector_round_title_bar_color"
+                android:layout_marginTop="@dimen/btn_bottom_margin_top"
+                android:layout_marginLeft="@dimen/btn_bottom_margin_left_right"
+                android:layout_marginRight="@dimen/btn_bottom_margin_left_right"
+                android:layout_marginBottom="@dimen/btn_bottom_margin_bottom"
+                android:clickable="true"
+                android:text="创建频道"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+        </com.bao.wec.ui.customview.StretchScrollView>
+
+
+
+
+</LinearLayout>

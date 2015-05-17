@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao = "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--永不-->
+            <LinearLayout
+                android:id="@+id/settings_autofinish_never_btn"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="永不"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:id="@+id/settings_autofinish_never_image"
+                    android:layout_width="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_radiobox_selected"/>
+
+            </LinearLayout>
+
+            <!--5分钟-->
+            <LinearLayout
+                android:id="@+id/settings_autofinish_5mins_btn"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="5分钟"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:visibility="invisible"
+                    android:id="@+id/settings_autofinish_5mins_image"
+                    android:layout_width="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_radiobox_selected"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/a"
+                android:text="@string/settings_autofinish_never"/>
+
+
+        </LinearLayout>
+        </com.bao.wec.ui.customview.StretchScrollView>
+
+
+
+</LinearLayout>

@@ -8,4 +8,20 @@
 
     <dimen name="default_corner_radius">4dp</dimen>
     <dimen name="default_shadow_radius">4dp</dimen>
+
+    <dimen name="create_item_height">55dp</dimen>
+    <dimen name="create_item_et_height">35dp</dimen>
+    <dimen name="create_item_label_text">18sp</dimen>
+    <dimen name="create_item_label_margin_left_right">20dp</dimen>
+
+    <dimen name="tab_text_size">12sp</dimen>
+    <dimen name="tab_text_marginBottom">5dp</dimen>
+    <dimen name="tab_text_marginTop">2dp</dimen>
+    <dimen name="tab_icon_width">25dp</dimen>
+    <dimen name="tab_height">55dp</dimen>
+    <dimen name="tab_icon_marginTop">5dp</dimen>
+
+    <dimen name="btn_bottom_margin_top">25dp</dimen>
+    <dimen name="btn_bottom_margin_left_right">70dp</dimen>
+    <dimen name="btn_bottom_margin_bottom">20dp</dimen>
 </resources>

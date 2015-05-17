@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar" />
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!--正在直播-->
+            <LinearLayout
+                android:id="@+id/room_living_ll"
+                android:orientation="vertical"
+                android:background="#2b2b2b"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.bao.wec.ui.customview.CircleImageView
+                        android:id="@+id/room_living_avatar"
+                        android:layout_centerHorizontal="true"
+                        bao:border_color="@color/d"
+                        bao:border_width="2dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/sample_avatar_2" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:layout_margin="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="正在直播" />
+
+                <TextView
+                    android:id="@+id/room_online_count_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/a"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="233人在线" />
+
+
+                <RelativeLayout
+                    android:padding="15dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/room_enter_living"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/btn_selector_round_title_bar_color"
+                            android:clickable="true"
+                            android:text="进入频道"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="40dp"
+                            android:src="@drawable/icon_lock_white"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <!--频道信息-->
+            <include
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/room_profile_layout" />
+
+            <!--节目单-->
+            <LinearLayout
+                android:id="@+id/room_program_list_ll"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:text="已发布节目单"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/create_item_height" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/e"/>
+
+
+                <ListView
+                    android:layout_marginTop="1px"
+                    android:id="@+id/listview"
+                    android:divider="@color/no"
+                    android:dividerHeight="1px"
+                    android:layoutAnimation="@anim/anim_layout"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <!--进入频道-->
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="15dp"
+                android:id="@+id/room_enter_bottom_btn_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/room_enter_bottom_btn"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_selector_round_title_bar_color"
+                        android:clickable="true"
+                        android:text="进入频道"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="40dp"
+                        android:src="@drawable/icon_lock_white"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.bao.wec.ui.customview.StretchScrollView>
+
+
+</LinearLayout>

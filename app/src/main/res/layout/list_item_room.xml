@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/btn_selector_white_grey">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.bao.wec.ui.customview.CircleImageView
+            android:id="@+id/item_room_avatar"
+            bao:border_color="@color/d"
+            bao:border_width="1px"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/sample_avatar" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_room_living_iv"
+                    android:src="@drawable/icon_living"
+                    android:layout_toLeftOf="@+id/item_room_lock_iv"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="50dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="17dp" />
+
+                <ImageView
+                    android:id="@+id/item_room_lock_iv"
+                    android:src="@drawable/icon_lock"
+                    android:layout_toLeftOf="@+id/item_room_online_count_tv"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="17dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="17dp" />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:id="@+id/item_room_online_count_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/eight"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="在线 : 225"/>
+
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/item_room_title_tv"
+                    android:layout_toLeftOf="@+id/item_room_living_iv"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="三首微商学院学院爆满招收中"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/room_title_color"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="19sp" />
+
+
+            </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/item_servant_details"
+                    android:padding="7dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/eight"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="这是最最火爆的微商社区,我们只卖最好的产品,我们只招最有梦想的人。这是最最火爆的微商社区,我们只卖最好的产品,我们只招最有梦想的人。"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/e" />
+
+
+
+
+</LinearLayout>

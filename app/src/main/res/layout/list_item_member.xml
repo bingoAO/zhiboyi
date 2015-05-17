@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/item_member_header_ll"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/item_member_header_tv"
+            android:text="频道主"
+            android:textColor="@color/six"
+            android:padding="15dp"
+            android:textSize="22sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/e" />
+
+
+        </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/item_member_ll_btn"
+        android:background="@drawable/btn_selector_white_grey"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.bao.wec.ui.customview.CircleImageView
+            android:id="@+id/item_member_avatar"
+            bao:border_color="@color/d"
+            bao:border_width="1px"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/sample_avatar_2" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+
+                <TextView
+                    android:id="@+id/item_member_name_tv"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alice"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/room_title_color"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="19sp" />
+
+            <LinearLayout
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item_member_gender_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/icon_female"/>
+
+
+                    <TextView
+                        android:layout_marginLeft="8dp"
+                        android:id="@+id/item_member_usertype_tv"
+                        android:textColor="@color/title_bar_color"
+                        android:textSize="12sp"
+                        android:padding="4dp"
+                        android:background="@drawable/title_bar_edittext_bg"
+                        android:text="频道主"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/item_member_details"
+                android:padding="7dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/eight"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-light"
+                android:text="我是有梦想的人。"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/e" />
+
+
+</LinearLayout>

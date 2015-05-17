@@ -22,14 +22,23 @@
     <color name="eight">#888</color>
     <color name="nine">#999</color>
 
-    <color name="app_bg">@color/white</color>
+    <color name="app_bg">@color/e</color>
 
     <color name="light_alpha_white">#33ffffff</color>
 
-    <color name="title_bar_color">@color/deepskyblue</color>
+    <color name="title_bar_color">#eb4c4f</color>
     <color name="title_bar_text_color">#fff</color>
-    <color name="title_bar_color_light">#cc00bfff</color>
+    <color name="title_bar_color_light">#cceb4c4f</color>
+    <color name="title_bar_color_alpha">#55eb4c4f</color>
     <color name="title_bar_color_disable">#33ffbef6</color>
+
+    <color name="tab_selected">@color/title_bar_color</color>
+    <color name="tab_normal">@color/a</color>
+
+    <color name="room_title_color">@color/five</color>
+
+    <color name="create_item_label_text_color">@color/five</color>
+
 
     <color name="pink">#ffc0cb</color><!--粉红色 -->
     <color name="lightpink">#ffb6c1</color><!--亮粉红色 -->
@@ -179,4 +188,12 @@
     <color name="gainsboro">#dcdcdc</color><!--淡灰色 -->
     <color name="default_shadow_color">#88757575</color>
     <color name="default_fill_color">#ffffff</color>
+
+
+    <integer-array name="google_colors">
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+    </integer-array>
 </resources>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/btn_selector_white_grey">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="7dp"
+                    android:id="@+id/item_program_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/a"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="2015年5月15日"/>
+
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/item_room_title_tv"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="爆满招收中"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/eight"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="18sp"
+                    android:layout_toLeftOf="@+id/item_program_date" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/icon_play"/>
+
+                    <TextView
+                        android:id="@+id/item_program_play_count"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/a"
+                        android:text="4520"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="fill_parent"
+                        android:src="@drawable/icon_length"/>
+
+                    <TextView
+                        android:id="@+id/item_program_length"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"
+                        android:textColor="@color/a"
+                        android:text="45 : 21"
+                        android:fontFamily="sans-serif-light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/item_program_submit_btn"
+                    android:textColor="@color/title_bar_color"
+                    android:textSize="12sp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:text="发布"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/e" />
+
+
+</LinearLayout>

@@ -1,0 +1,251 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao = "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!--头像-->
+            <LinearLayout
+                android:id="@+id/me_mdf_avatar_btn"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="修改头像"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <com.bao.wec.ui.customview.CircleImageView
+                        android:layout_centerInParent="true"
+                        android:id="@+id/me_mdf_avatar"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="10dp"
+                        bao:border_color="@color/d"
+                        bao:border_width="2dp"
+                        android:src="@drawable/sample_avatar_2"/>
+
+                    </RelativeLayout>
+
+
+
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+
+
+            <!--昵称-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:text="昵称"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <EditText
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/me_mdf_name_et"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/create_item_et_height"
+                    android:layout_gravity="center"
+                    android:textCursorDrawable="@null"
+                    android:inputType="text"
+                    android:fontFamily="sans-serif-light"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:hint="请输入昵称"
+                    android:maxLength="10"
+                    android:textColorHint="@color/title_bar_color_alpha"
+                    android:textSize="17sp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/title_bar_color_light"/>
+
+            </LinearLayout>
+
+
+
+            <!--性别-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:text="性别"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:id="@+id/me_mdf_male_iv"
+                    android:src="@drawable/icon_radiobox_normal"
+                    android:layout_width="@dimen/create_item_height"
+                    android:layout_height="fill_parent"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:paddingRight="13dp"/>
+
+                <TextView
+                    android:id="@+id/me_mdf_male_label"
+                    android:layout_marginLeft="-10dp"
+                    android:text="男"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:id="@+id/me_mdf_female_iv"
+                    android:src="@drawable/icon_radiobox_selected"
+                    android:layout_width="@dimen/create_item_height"
+                    android:layout_height="fill_parent"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:paddingRight="13dp"/>
+
+                <TextView
+                    android:id="@+id/me_mdf_female_label"
+                    android:layout_marginLeft="-10dp"
+                    android:text="女"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+
+            </LinearLayout>
+
+
+            <!--个性签名-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:text="个性签名"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/create_item_height" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/e"/>
+
+
+
+                <EditText
+                    android:id="@+id/me_mdf_details_et"
+                    android:inputType="text"
+                    android:textCursorDrawable="@null"
+                    android:layout_margin="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/create_item_et_height"
+                    android:background="@drawable/title_bar_edittext_bg"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="请输入个性签名"
+                    android:maxLength="100"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/title_bar_color_alpha"
+                    android:textSize="17sp"
+                    android:paddingTop="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/title_bar_color_light" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/me_mdf_bottom_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_selector_round_title_bar_color"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="@dimen/btn_bottom_margin_left_right"
+                android:layout_marginRight="@dimen/btn_bottom_margin_left_right"
+                android:layout_marginBottom="@dimen/btn_bottom_margin_bottom"
+                android:clickable="true"
+                android:text="保存信息"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+
+
+        </LinearLayout>
+        </com.bao.wec.ui.customview.StretchScrollView>
+
+
+
+</LinearLayout>

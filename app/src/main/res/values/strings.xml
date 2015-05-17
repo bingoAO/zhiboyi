@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">Hnbs</string>
+    <string name="app_name">微课</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="settings_autofinish_never">应用处于后台时,你将一直保持与所在频道的连接</string>
+    <string name="settings_autofinish_5mins">应用处于后台时,若所在的频道超过5分钟无直播,则自动退出该频道</string>
+
+
 </resources>

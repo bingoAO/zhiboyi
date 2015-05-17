@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao = "http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--自动退出频道-->
+            <LinearLayout
+                android:id="@+id/settings_autofinish_btn"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="自动退出频道"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+            <!--关于我们-->
+            <LinearLayout
+                android:id="@+id/settings_aboutus_btn"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="关于我们"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+
+            <!--退出登录-->
+
+                <TextView
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/settings_logout"
+                    android:text="退出登录"
+                    android:gravity="center"
+                    android:background="@drawable/btn_selector_white_grey"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/create_item_height" />
+
+
+        </LinearLayout>
+        </com.bao.wec.ui.customview.StretchScrollView>
+
+
+
+</LinearLayout>

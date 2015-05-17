@@ -1,0 +1,145 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar"/>
+
+
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--个人信息入口-->
+            <LinearLayout
+                android:id="@+id/me_mdf_btn"
+                android:background="@drawable/btn_selector_white_grey"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <com.bao.wec.ui.customview.CircleImageView
+                    android:id="@+id/me_avatar"
+                    bao:border_color="@color/d"
+                    bao:border_width="2dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/sample_avatar_2" />
+
+                <LinearLayout
+                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/me_name_tv"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人丑多读书"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/room_title_color"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:textSize="21sp" />
+
+
+                    <TextView
+                        android:id="@+id/me_details_tv"
+                        android:padding="7dp"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/eight"
+                        android:textSize="17sp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="努力努力,盛夏好声音!"/>
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="10dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+
+            <!--设置入口-->
+            <LinearLayout
+                android:id="@+id/me_settings_btn"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="7dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/icon_settings" />
+
+                <TextView
+                    android:layout_weight="5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="应用设置"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/room_title_color"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="21sp" />
+
+
+
+
+                <ImageView
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="10dp"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:scaleType="centerInside"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </com.bao.wec.ui.customview.StretchScrollView>
+
+
+
+</LinearLayout>

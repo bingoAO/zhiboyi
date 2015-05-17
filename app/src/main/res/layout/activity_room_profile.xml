@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bao="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg">
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        layout="@layout/title_bar" />
+
+    <com.bao.wec.ui.customview.StretchScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <!--正在直播-->
+
+            <!--频道信息-->
+            <include
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/room_profile_layout" />
+
+            <!--成员-->
+            <LinearLayout
+                android:id="@+id/room_profile_member_btn"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="成员"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/room_profile_member_count_tv"
+                    android:layout_weight="1"
+                    android:text="185 人"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+            <!--节目-->
+            <LinearLayout
+                android:id="@+id/room_profile_program_btn"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="节目"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"/>
+
+                <TextView
+                    android:id="@+id/room_profile_program_count_tv"
+                    android:layout_weight="1"
+                    android:text="15 个"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+
+            <!--地址-->
+            <LinearLayout
+                android:id="@+id/room_profile_addr_btn"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_selector_white_grey"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/create_item_height">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="频道地址"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_marginRight="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"/>
+
+                <TextView
+                    android:id="@+id/room_profile_addr_tv"
+                    android:layout_weight="1"
+                    android:text="baidu.com"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_vertical|right"
+                    android:textSize="@dimen/create_item_label_text"
+                    android:textColor="@color/create_item_label_text_color"
+                    android:layout_marginLeft="@dimen/create_item_label_margin_left_right"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_right_chevron_grey"
+                    android:layout_margin="18dp"/>
+
+            </LinearLayout>
+
+            <!--订阅-->
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="15dp"
+                android:id="@+id/room_enter_bottom_btn_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/room_profile_bottom_btn"
+                        android:layout_centerInParent="true"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_selector_round_title_bar_color"
+                        android:clickable="true"
+                        android:text="订阅"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </com.bao.wec.ui.customview.StretchScrollView>
+
+
+</LinearLayout>
