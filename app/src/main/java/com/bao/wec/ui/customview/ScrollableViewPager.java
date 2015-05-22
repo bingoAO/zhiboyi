@@ -12,9 +12,12 @@ public class ScrollableViewPager extends ViewPager {
 
     private boolean mScrollable = true;
 
+    //构造函数
+
     public ScrollableViewPager(Context context) {
         super(context);
     }
+    //带属性的构造函数
 
     public ScrollableViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -38,6 +41,7 @@ public class ScrollableViewPager extends ViewPager {
 
 
     @Override
+    //拦截事件
     public boolean onInterceptTouchEvent(MotionEvent arg0) {
         // TODO Auto-generated method stub
         if (mScrollable) {

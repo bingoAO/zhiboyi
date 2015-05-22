@@ -48,6 +48,7 @@ public class PullRefreshLayout extends ViewGroup {
 
 
     private ImageView mRefreshView;
+    //校对机
     private Interpolator mDecelerateInterpolator;
     private int mTouchSlop;
     private int mMediumAnimationDuration;
@@ -72,6 +73,7 @@ public class PullRefreshLayout extends ViewGroup {
 
     public PullRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
+        //自定义属性的使用
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.PullRefreshLayout);
         final int type = a.getInteger(R.styleable.PullRefreshLayout_type, STYLE_MATERIAL);
         final int colorsId = a.getResourceId(R.styleable.PullRefreshLayout_colors, R.array.google_colors);

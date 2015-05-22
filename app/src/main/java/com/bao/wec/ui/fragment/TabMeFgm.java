@@ -24,6 +24,7 @@ public class TabMeFgm extends BaseFragment {
 
 
     @Override
+    //@Nullable表示定义的字段可以为空
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_me, container, false);
         aq = new AQuery(view);
@@ -41,7 +42,7 @@ public class TabMeFgm extends BaseFragment {
         aq.id(R.id.me_settings_btn).clicked(this,"aq_go_settings");
     }
 
-
+//实现跳转功能
     public void aq_go_mdf(){
         mActivity.redirectToActivity(mActivity, MeMdfActivity.class);
     }

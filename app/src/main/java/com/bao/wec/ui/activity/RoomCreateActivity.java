@@ -23,6 +23,7 @@ import com.bao.wec.utils.LogUtils;
 
 import java.io.File;
 
+//创建频道
 public class RoomCreateActivity extends BasePageActivity {
     AQuery aq;
 
@@ -40,6 +41,7 @@ public class RoomCreateActivity extends BasePageActivity {
 
     }
 
+    //在设置布局之后，要改动title_bar的设置
     @Override
     protected void setupViews(Bundle bundle) {
         aq.id(R.id.title_bar_name).text("创建频道");
@@ -130,15 +132,21 @@ public class RoomCreateActivity extends BasePageActivity {
      * 调用系统直接拍照
      */
     private void takePhoto() {
+        //调用系统相机
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //新建目录
         File file = new File(Environment.getExternalStorageDirectory(),
                 "time_"
                         + String.valueOf(System.currentTimeMillis())
                         + ".jpg");
+        //解析目录为uri
         imageCaptureUri = Uri.fromFile(file);
+        //按照制定的路径导出
         intent.putExtra(MediaStore.EXTRA_OUTPUT,
                 imageCaptureUri);
+        //键值对方式
         intent.putExtra("return-data", true);
+        //调用
         startActivityForResult(intent, Constant.CODE.PICK_FROM_CAMERA);
 
     }
@@ -158,12 +166,14 @@ public class RoomCreateActivity extends BasePageActivity {
 
 
     @Override
+    // 回调，得到图片怎么办
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != RESULT_OK)
             return;
 
         switch (requestCode){
             case Constant.CODE.PICK_FROM_FILE:
+                //图片缩放，从文件那里得到和拍照直接得来的处理方式为什么不一样
                 startPhotoZoom(data.getData());
                 break;
             case Constant.CODE.PICK_FROM_CAMERA:
@@ -189,9 +199,10 @@ public class RoomCreateActivity extends BasePageActivity {
         // aspectX aspectY 是宽高的比例
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
-        // outputX outputY 是裁剪图片宽高
+        // outputX outputY 是裁剪图片宽高,128
         intent.putExtra("outputX", Constant.Count.UPLOAD_AVATAR_SIZE);
         intent.putExtra("outputY", Constant.Count.UPLOAD_AVATAR_SIZE);
+        //??
         intent.putExtra("return-data", true);
         startActivityForResult(intent, Constant.CODE.ACTION_CROP);
     }

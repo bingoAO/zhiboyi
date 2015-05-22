@@ -34,6 +34,8 @@ public class ProgramAdapter extends BaseAdapter {
      * @param context
      * @param listItems
      */
+    //            setmBaseAdapter(new ProgramAdapter(getActivity(), items, type));
+
     public ProgramAdapter(Context context, List<BmobObject> listItems ,int type) {
         this.context = context;
         listContainer = LayoutInflater.from(this.context);   //创建视图容器并设置上下文

@@ -17,9 +17,20 @@ import com.bao.wec.app.MyApplication;
 import com.bao.wec.utils.SpUtils;
 
 
+/**
+ * 用于监视Shared Preference的变化
+ * OnSharedPreferenceChangeListener
+ *继承接口
+ * registerOnSharedPreferenceChangeListener
+ * 注册
+ * onSharedPreferenceChanged
+ * 事件处理器
+ */
+
 public class BaseActivity extends FragmentActivity implements OnSharedPreferenceChangeListener{
 
     protected static String mTAG ;
+
 
     protected MyApplication mMyApplication;
     protected SpUtils mSpUtils;

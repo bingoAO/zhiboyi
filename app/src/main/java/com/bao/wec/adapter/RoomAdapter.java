@@ -46,19 +46,23 @@ public class RoomAdapter extends BaseAdapter {
         return null;
     }
 
+    //为什么return0呢
     public long getItemId(int arg0) {
         return 0;
     }
 
     /**
      * ListView Item设置
+     * 终于找到了
      */
+    //视图的内容在哪里初始化，本来布局就已经初始化好了的，现在还不能动动态跟换
     public View getView(final int position, View convertView, ViewGroup parent) {
         //自定义视图
         ListItemView listItemView = null;
         if (convertView == null) {
             listItemView = new ListItemView();
             //获取list_item布局文件的视图
+            //listContainer容器上下文
             convertView = listContainer.inflate(R.layout.list_item_room, null);
             //获取控件对象
             //listItemView.tag = (TextView) convertView.findViewById(R.id.grid_item_tag_text);

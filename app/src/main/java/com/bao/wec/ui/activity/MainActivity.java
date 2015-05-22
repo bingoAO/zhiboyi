@@ -23,11 +23,16 @@ import java.util.List;
 
 
 public class MainActivity extends BaseActivity {
+    /**
+     * 绑定viewpager和tab
+     */
     private PagerTabWidget mTabWidget;
     private PagerAdapter mPagerAdapter;
+    //设置viewpager是否允许滑动
     private ScrollableViewPager mViewPager;
     private AQuery aq;
 
+    //三个fragment
     private TabHomeAndSbcFgm tabHomeFgm;
     private TabHomeAndSbcFgm tabSbcFgm;
     private TabMeFgm tabMeFgm;
@@ -48,6 +53,9 @@ public class MainActivity extends BaseActivity {
      * 初始化Tab的显示内容
      */
     private void initTab() {
+
+        //pagertabwidget
+
         mTabWidget = (PagerTabWidget) findViewById(R.id.home_tabWidget);
         mTabWidget.setDividerInvisible();
         mTabWidget.addTab(LayoutInflater.from(this).inflate(R.layout.tab_home, null));
@@ -57,18 +65,19 @@ public class MainActivity extends BaseActivity {
         mViewPager = (ScrollableViewPager) findViewById(R.id.main_viewPager);
 
         List<Fragment> fragments = new ArrayList<>();
-//
+//新建Fragment类，设置类型
         fragments.add(setTabHomeFgm(TabHomeAndSbcFgm.newInstance(TabHomeAndSbcFgm.FRAGMENT_HOME)));
         fragments.add(setTabSbcFgm(TabHomeAndSbcFgm.newInstance(TabHomeAndSbcFgm.FRAGMENT_SBC)));
         fragments.add(setTabMeFgm(TabMeFgm.newInstance()));
 //        fragments.add(setTabMsgFgm(TabMsgFgm.newInstance()));
 //        fragments.add(setTabMeFgm(TabOrderFgm.newInstance()));
-
+//
         mPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(), fragments);
-
+//container
         mViewPager.setAdapter(mPagerAdapter);
         //设置ViewPager无法滑动交互
         mViewPager.setmScrollable(false);
+        //预加载两页
         mViewPager.setOffscreenPageLimit(2);
 
         mTabWidget.setmViewPager(mViewPager);
@@ -77,6 +86,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onSelected(List<View> tabViews, int position) {
                 //ShowToast("第" + position + "个Tab被选中");
+                //实现换色功能
             switch (position){
                 case 0:
                     aq.id(R.id.tab_icon_home_id).image(R.drawable.icon_tab_home_selected);

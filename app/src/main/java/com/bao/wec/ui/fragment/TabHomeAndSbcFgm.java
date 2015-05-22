@@ -18,16 +18,19 @@ import com.bao.wec.ui.base.BaseFragment;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
+//basefragment用于toast
 
 public class TabHomeAndSbcFgm extends BaseFragment {
+
     AQuery aq;
     ListFgm listFgm;
     Dialog enterDialog;
 
     public static final int FRAGMENT_HOME = 0;
     public static final int FRAGMENT_SBC = 1;
+    //type的作用是，区分
     int type = 0;
-
+//hello你好
 
     public static TabHomeAndSbcFgm newInstance(int type) {
         TabHomeAndSbcFgm fragment = new TabHomeAndSbcFgm();
@@ -61,6 +64,7 @@ public class TabHomeAndSbcFgm extends BaseFragment {
     private void initHomeViews(){
         aq.id(R.id.btn_right_img).visible().margin(5,5,5,5).image(R.drawable.icon_add).clicked(this,"aq_add");
         aq.id(R.id.title_bar_name).text("首页");
+        //子listView不应该一样吗
         listFgm = ListFgm.newInstance(Constant.CODE.LIST_HOME_ROOM);
         getChildFragmentManager().beginTransaction().add(R.id.fragment_container, listFgm).commit();
 
@@ -69,6 +73,7 @@ public class TabHomeAndSbcFgm extends BaseFragment {
     private void initSbcViews(){
         aq.id(R.id.title_bar_name).text("订阅");
         listFgm = ListFgm.newInstance(Constant.CODE.LIST_SBC_ROOM);
+        //增加子布局
         getChildFragmentManager().beginTransaction().add(R.id.fragment_container, listFgm).commit();
 
     }
@@ -89,6 +94,7 @@ public class TabHomeAndSbcFgm extends BaseFragment {
         View popAddView = getActivity().getLayoutInflater().inflate(
                 R.layout.pop_add, null);
         final PopupWindow popupWindow = new PopupWindow(popAddView,
+                // 最后一个参数表示是否能够获得焦点
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, true);
         popupWindow.setFocusable(true);
         popupWindow.setOutsideTouchable(true);

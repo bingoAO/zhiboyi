@@ -23,6 +23,7 @@ import cn.bmob.v3.BmobObject;
 
 
 public class ListFgm extends BaseRefreshFragment {
+    //每个list元素是一个BmobObject对象
     private List<BmobObject> items = new ArrayList<>();
 
 
@@ -47,6 +48,8 @@ public class ListFgm extends BaseRefreshFragment {
         this.type = type;
     }
 
+    //先初始化布局，然后更新列表数据
+
     @Override
     protected void initRefreshView() {
 
@@ -63,7 +66,9 @@ public class ListFgm extends BaseRefreshFragment {
     protected void updateListData() {
 
         if (!isLoading) {
+            //正在加载
             isLoading = true;
+            // type在新加载fragment对象时已经初始化
             switch (type) {
                 case Constant.CODE.LIST_HOME_ROOM:
                     initHomeRoomList();
@@ -82,8 +87,9 @@ public class ListFgm extends BaseRefreshFragment {
 
         }
     }
-
+//初始化列表
     private void initProgramList() {
+        //items是一个数组
         items.add(new BmobObject());
         items.add(new BmobObject());
         items.add(new BmobObject());
@@ -142,6 +148,7 @@ public class ListFgm extends BaseRefreshFragment {
 
 
     private void initMemberList() {
+        //为什么
         setmEnablePull(false);
 
         items.add(new User().setType(2));
@@ -152,6 +159,7 @@ public class ListFgm extends BaseRefreshFragment {
         items.add(new User().setType(0));
         items.add(new User().setType(0));
 
+
         hideLoadingBarAndCheckResult();
 
         if (getmBaseAdapter() == null) {
@@ -161,6 +169,8 @@ public class ListFgm extends BaseRefreshFragment {
         }
 
     }
+
+    //
 
     @Override
     protected void onRefreshData() {

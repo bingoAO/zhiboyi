@@ -17,6 +17,7 @@ import com.bao.wec.utils.LogUtils;
 public abstract class BaseRefreshFragment extends BaseFragment {
 
     protected AbsListView mListView ;
+    //设置是否可下拉
     protected boolean mEnablePull = true ;
     protected View mLayout;
     protected AQuery mAq;
@@ -26,7 +27,7 @@ public abstract class BaseRefreshFragment extends BaseFragment {
 
     PullRefreshLayout mRefreshLayout;
 
-
+//
     int layout_id = 0,listview_id = 0,recycler_view_id = 0,refresh_layout_id = 0;
     int mRefreshStyle;
 
@@ -88,6 +89,7 @@ public abstract class BaseRefreshFragment extends BaseFragment {
         return mBaseAdapter;
     }
 
+//这五个函数用来设置id
 
     public void setRefreshingComplete(){
         mRefreshLayout.setRefreshing(false);
@@ -108,7 +110,7 @@ public abstract class BaseRefreshFragment extends BaseFragment {
     public void setmEnablePull(boolean mEnablePull) {
         this.mEnablePull = mEnablePull;
     }
-
+//
 
     public void setmBaseAdapter(BaseAdapter mBaseAdapter) {
         this.mBaseAdapter = mBaseAdapter;

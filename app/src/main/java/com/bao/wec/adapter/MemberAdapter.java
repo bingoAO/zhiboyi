@@ -86,7 +86,7 @@ public class MemberAdapter extends BaseAdapter{
                 holder.user_type_tv.setText("成员");
                 break;
         }
-
+//社么情况隐藏header
         if(position != 0 && ((User)listItems.get(position - 1)).getType() == user.getType()){
             //隐藏header
             holder.header_ll.setVisibility(View.GONE);

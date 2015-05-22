@@ -20,11 +20,11 @@ import android.widget.ImageView;
 
 import com.bao.wec.R;
 
-
+//先继承imageView
 public class CircleImageView extends ImageView {
-
+//设置图片缩放类型setScaleType(ScaleType.CENTER_CROP); 中间截取
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
-
+//Bitmap.Config ARGB_8888 32 每个像素 占八位  图片质量参数
     private static final Bitmap.Config BITMAP_CONFIG = Bitmap.Config.ARGB_8888;
     private static final int COLORDRAWABLE_DIMENSION = 2;
 
@@ -92,6 +92,7 @@ public class CircleImageView extends ImageView {
         return SCALE_TYPE;
     }
 
+    //设置图片缩放类型setScaleType(ScaleType.CENTER_CROP); 中间截取
     @Override
     public void setScaleType(ScaleType scaleType) {
         if (scaleType != SCALE_TYPE) {
@@ -111,7 +112,7 @@ public class CircleImageView extends ImageView {
         if (getDrawable() == null) {
             return;
         }
-
+//中间截取图片，半径设置为：r=min(width,height),圆心设为：cx=width/2,cy=height/2，这样可以从中间开始截取圆形图片
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, mDrawableRadius, mBitmapPaint);
         if (mBorderWidth != 0) {
             canvas.drawCircle(getWidth() / 2, getHeight() / 2, mBorderRadius, mBorderPaint);
